@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Natural Language Compiler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1> Natural Language → Code Language</h1>
+
+    <textarea id="inputText" placeholder="Type instructions...
+Example:
+create variable x value 10
+create variable y value 20
+add x and y
+print x"></textarea>
+
+    <div class="buttons">
+        <button onclick="convertCode()">Convert</button>
+        <button onclick="clearText()">Clear</button>
+    </div>
+
+    <div class="output-box">
+        <h3>Generated Code:</h3>
+        <pre id="outputText"></pre>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
